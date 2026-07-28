@@ -4,6 +4,16 @@ A JavaFX desktop application for managing customers, accounts, deposits,
 withdrawals, transfers, loans and reports for a small bank — built as an
 OOP semester project and then reworked into a more complete, portfolio-ready
 version.
+## Screenshots
+
+**Dashboard**
+![Dashboard](dashboard.png)
+
+**Loans**
+![Loans](loans.png)
+
+**Open Account**
+![Open Account](openaccount.png)
 
 ## What changed from the original submission
 
