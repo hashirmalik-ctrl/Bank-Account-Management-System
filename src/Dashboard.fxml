@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="DashboardController" styleClass="root">
+    <top>
+        <VBox styleClass="top-bar" spacing="6">
+            <HBox spacing="10" styleClass="brand-row">
+                <Label text="&#127974;" styleClass="brand-icon"/>
+                <Label text="People United Bank" styleClass="title-label"/>
+            </HBox>
+            <Label text="Manage customers, accounts, loans and reports from one place" styleClass="subtitle-label"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="24" right="24" bottom="24" left="24"/>
+            </padding>
+
+            <HBox spacing="16">
+                <VBox styleClass="stat-card, stat-card-gold" spacing="4" HBox.hgrow="ALWAYS">
+                    <Label text="TOTAL CUSTOMERS" styleClass="stat-name"/>
+                    <Label fx:id="totalCustomersLabel" text="0" styleClass="stat-value"/>
+                </VBox>
+                <VBox styleClass="stat-card, stat-card-blue" spacing="4" HBox.hgrow="ALWAYS">
+                    <Label text="TOTAL ACCOUNTS" styleClass="stat-name"/>
+                    <Label fx:id="totalAccountsLabel" text="0" styleClass="stat-value"/>
+                </VBox>
+                <VBox styleClass="stat-card, stat-card-green" spacing="4" HBox.hgrow="ALWAYS">
+                    <Label text="TOTAL DEPOSITS ($)" styleClass="stat-name"/>
+                    <Label fx:id="totalDepositsLabel" text="0.00" styleClass="stat-value"/>
+                </VBox>
+            </HBox>
+
+            <Label text="Actions" styleClass="section-label"/>
+
+            <GridPane hgap="14" vgap="14">
+                <Button text="&#128100;  Add Customer" styleClass="nav-button" onAction="#handleAddCustomer"
+                        GridPane.columnIndex="0" GridPane.rowIndex="0" maxWidth="Infinity"/>
+                <Button text="&#128193;  Open Account" styleClass="nav-button" onAction="#handleOpenAccount"
+                        GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="Infinity"/>
+                <Button text="&#128176;  Deposit" styleClass="nav-button" onAction="#handleDeposit"
+                        GridPane.columnIndex="2" GridPane.rowIndex="0" maxWidth="Infinity"/>
+                <Button text="&#128181;  Withdraw" styleClass="nav-button" onAction="#handleWithdraw"
+                        GridPane.columnIndex="0" GridPane.rowIndex="1" maxWidth="Infinity"/>
+                <Button text="&#128257;  Transfer" styleClass="nav-button" onAction="#handleTransfer"
+                        GridPane.columnIndex="1" GridPane.rowIndex="1" maxWidth="Infinity"/>
+                <Button text="&#128203;  View Accounts" styleClass="nav-button" onAction="#handleViewAccounts"
+                        GridPane.columnIndex="2" GridPane.rowIndex="1" maxWidth="Infinity"/>
+                <Button text="&#128274;  Close Account" styleClass="nav-button" onAction="#handleCloseAccount"
+                        GridPane.columnIndex="0" GridPane.rowIndex="2" maxWidth="Infinity"/>
+                <Button text="&#127974;  Loans" styleClass="nav-button" onAction="#handleLoans"
+                        GridPane.columnIndex="1" GridPane.rowIndex="2" maxWidth="Infinity"/>
+                <Button text="&#128202;  Reports" styleClass="nav-button" onAction="#handleReports"
+                        GridPane.columnIndex="2" GridPane.rowIndex="2" maxWidth="Infinity"/>
+                <columnConstraints>
+                    <javafx.scene.layout.ColumnConstraints percentWidth="33.3"/>
+                    <javafx.scene.layout.ColumnConstraints percentWidth="33.3"/>
+                    <javafx.scene.layout.ColumnConstraints percentWidth="33.3"/>
+                </columnConstraints>
+            </GridPane>
+        </VBox>
+    </center>
+</BorderPane>

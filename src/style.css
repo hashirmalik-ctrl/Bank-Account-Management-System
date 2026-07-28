@@ -1,0 +1,207 @@
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-background-color: #eef1f6;
+}
+
+/* ---------- Top bar / branding ---------- */
+
+.top-bar {
+    -fx-background-color: linear-gradient(to right, #0a1f44, #16325c);
+    -fx-padding: 20 28 20 28;
+}
+
+.brand-row {
+    -fx-alignment: center-left;
+}
+
+.brand-icon {
+    -fx-font-size: 28px;
+}
+
+.title-label {
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.subtitle-label {
+    -fx-font-size: 12.5px;
+    -fx-text-fill: #b9c6dd;
+}
+
+.top-bar .title-label, .top-bar .subtitle-label {
+    -fx-text-fill: white;
+}
+.top-bar .subtitle-label {
+    -fx-text-fill: #b9c6dd;
+}
+
+/* ---------- Section headers ---------- */
+
+.section-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #16325c;
+}
+
+/* ---------- Dashboard stat cards ---------- */
+
+.stat-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 16 22 16 22;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(16,42,87,0.10), 10, 0, 0, 3);
+}
+
+.stat-card-gold { -fx-border-color: #d4af37; -fx-border-width: 0 0 0 4; -fx-border-radius: 12; }
+.stat-card-green { -fx-border-color: #059669; -fx-border-width: 0 0 0 4; -fx-border-radius: 12; }
+.stat-card-blue { -fx-border-color: #2563eb; -fx-border-width: 0 0 0 4; -fx-border-radius: 12; }
+
+.stat-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0a1f44;
+}
+
+.stat-name {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #64748b;
+}
+
+/* ---------- Nav buttons on dashboard ---------- */
+
+.nav-button {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-text-fill: #16325c;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: bold;
+    -fx-padding: 18 10 18 10;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(16,42,87,0.08), 6, 0, 0, 1);
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #0a1f44;
+    -fx-text-fill: #ffd76a;
+    -fx-border-color: #0a1f44;
+}
+
+/* ---------- Buttons ---------- */
+
+.action-button {
+    -fx-background-color: #059669;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 9 20 9 20;
+    -fx-cursor: hand;
+}
+.action-button:hover { -fx-background-color: #047857; }
+
+.secondary-button {
+    -fx-background-color: #eef1f6;
+    -fx-text-fill: #16325c;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 9 20 9 20;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+.secondary-button:hover { -fx-background-color: #e2e8f0; }
+
+.danger-button {
+    -fx-background-color: #dc2626;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 9 20 9 20;
+    -fx-cursor: hand;
+}
+.danger-button:hover { -fx-background-color: #b91c1c; }
+
+.gold-button {
+    -fx-background-color: #d4af37;
+    -fx-text-fill: #0a1f44;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 9 20 9 20;
+    -fx-cursor: hand;
+}
+.gold-button:hover { -fx-background-color: #c19b2e; }
+
+/* ---------- Forms ---------- */
+
+.form-pane {
+    -fx-padding: 26;
+    -fx-background-color: #eef1f6;
+}
+
+.text-field, .choice-box, .text-area {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #cbd5e1;
+    -fx-padding: 6 8 6 8;
+}
+
+.text-field:focused, .choice-box:focused, .text-area:focused {
+    -fx-border-color: #0a1f44;
+}
+
+/* ---------- Tables / lists ---------- */
+
+.table-view, .list-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 10;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #16325c;
+    -fx-background-radius: 10 10 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8fafc;
+}
+
+/* ---------- Status badges (used via cell styling) ---------- */
+
+.badge-active {
+    -fx-text-fill: #065f46;
+    -fx-background-color: #d1fae5;
+    -fx-background-radius: 12;
+    -fx-padding: 2 10 2 10;
+    -fx-font-weight: bold;
+}
+
+.badge-closed {
+    -fx-text-fill: #7f1d1d;
+    -fx-background-color: #fee2e2;
+    -fx-background-radius: 12;
+    -fx-padding: 2 10 2 10;
+    -fx-font-weight: bold;
+}
+
+.badge-paid {
+    -fx-text-fill: #1e3a8a;
+    -fx-background-color: #dbeafe;
+    -fx-background-radius: 12;
+    -fx-padding: 2 10 2 10;
+    -fx-font-weight: bold;
+}

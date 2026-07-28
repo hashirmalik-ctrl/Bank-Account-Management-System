@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="CloseAccountController" spacing="12" styleClass="form-pane">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <Label text="&#128274;  Close Account" styleClass="section-label"/>
+
+    <Label text="Account Number"/>
+    <TextField fx:id="accountNoField" promptText="e.g. ACC1001"/>
+
+    <Button text="Close Account" styleClass="danger-button" onAction="#handleCloseAccount"/>
+</VBox>
